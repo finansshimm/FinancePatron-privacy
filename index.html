@@ -39,7 +39,7 @@
 <body>
 
 <h1>FinancePatron — Gizlilik Politikası</h1>
-<p class="updated"><strong>Son güncelleme:</strong> 09.07.2026</p>
+<p class="updated"><strong>Son güncelleme:</strong> 09.07.2026 (bulut yedekleme eklendi)</p>
 
 <hr>
 
@@ -68,12 +68,13 @@ işlediğini açıklar.</p>
 
 <h2>1. Hangi verileri topluyoruz?</h2>
 
-<h3>1.1 Cihazınızda kalan veriler (bizim sunucularımıza gönderilmez)</h3>
+<h3>1.1 Cihazınızda kalan veriler (varsayılan olarak sunucuya gönderilmez)</h3>
 <ul>
 <li><strong>Oyun ilerlemesi</strong>: kullanıcı adınız, oyun içi bakiyeniz, kariyer/şirket
-durumunuz, forum geçmişiniz gibi tüm oyun verisi <strong>yalnızca cihazınızda</strong>,
-yerel bir dosyada saklanır. Bu veriler bizim veya üçüncü bir tarafın
-sunucusuna aktarılmaz.</li>
+durumunuz, forum geçmişiniz gibi tüm oyun verisi <strong>varsayılan olarak
+yalnızca cihazınızda</strong>, yerel bir dosyada saklanır. Ayarlar'dan Google
+ile bağlanmadığınız sürece bu veriler hiçbir sunucuya aktarılmaz (isteğe
+bağlı bulut yedekleme için bkz. 1.4).</li>
 <li><strong>Uygulama içi kimlik bilgileri</strong> (kullanıcı adı/parola alanı): bu, gerçek
 bir hesap sistemi değil, yalnızca cihaz üzerinde birden fazla oyun
 profili ayırt etmeye yarayan yerel bir mekanizmadır.</li>
@@ -98,35 +99,44 @@ işlenir: <a href="https://policies.google.com/privacy" target="_blank" rel="noo
 anda aktif olarak kullanılan bir analitik özelliği yoktur. Giriş/kimlik
 doğrulama ile ilgili ayrıntılar için aşağıdaki 1.4'e bakınız.</p>
 
-<h3>1.4 Google ile Giriş (Firebase Authentication)</h3>
-<p>Uygulama, Google hesabınızla giriş yapmanızı sağlayan bir altyapı (Firebase
-Authentication + Google Sign-In) içerir. Bu özellik kullanıldığında Google
-hesabınızdan:</p>
+<h3>1.4 Google ile Giriş ve İsteğe Bağlı Bulut Yedekleme</h3>
+<p>Ayarlar ekranındaki <strong>"Google ile Bağlan"</strong> seçeneğini kullanırsanız
+(Firebase Authentication + Google Sign-In ile), Google hesabınızdan:</p>
 <ul>
 <li>E-posta adresiniz</li>
 <li>Görünen adınız</li>
 <li>Profil fotoğrafınız</li>
 </ul>
-<p>talep edilir ve yalnızca hesabınızı tanımlamak / oyun ilerlemenizi
-hesabınızla ilişkilendirmek amacıyla kullanılır. Bu veriler Firebase (Google)
-altyapısında, Google'ın kendi gizlilik politikasına göre işlenir:
+<p>talep edilir. Bu bilgiler yalnızca hesabınızı tanımlamak amacıyla kullanılır.</p>
+<p>Bağlandıktan sonra, cihazınızdaki <strong>oyun ilerleme verileriniz</strong> (bakiye,
+kariyer, şirket, hisse portföyü vb. — bkz. 1.1), cihaz değiştirdiğinizde
+veya uygulamayı sildiğinizde kaybolmaması için Firebase Cloud Firestore
+altyapısına, yalnızca sizin hesabınıza bağlı olarak <strong>isteğe bağlı bir
+yedek</strong> şeklinde yüklenir. Bu veriye sadece siz (kendi hesabınızla giriş
+yaparak) erişebilirsiniz; başka hiçbir kullanıcı erişemez. Ayarlar
+ekranından bu buluttaki yedeği istediğiniz zaman kalıcı olarak silebilir
+veya hesap bağlantısını kesebilirsiniz.</p>
+<p>Bu veriler Firebase (Google) altyapısında, Google'ın kendi gizlilik
+politikasına göre işlenir:
 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
 ve
 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></p>
-<p><em>Not: Bu özellik mevcut sürümde uygulama arayüzünde henüz aktif olarak
-sunulmamaktadır. Etkinleştirildiğinde bu politika güncellenecek ve
-"Son güncelleme" tarihi değiştirilecektir.</em></p>
+<p><em>Not: Google ile bağlanmak tamamen isteğe bağlıdır — oyunun tamamı, hesap
+bağlamadan, tüm ilerleme cihazınızda yerel olarak saklanarak da
+oynanabilir.</em></p>
 
 <hr>
 
 <h2>2. Verilerinizi kimlerle paylaşıyoruz?</h2>
 <ul>
-<li>Oyun ilerleme verinizi <strong>hiç kimseyle paylaşmıyoruz</strong> çünkü bu veri hiçbir
-zaman cihazınızdan dışarı çıkmaz.</li>
+<li>Oyun ilerleme verinizi <strong>hiç kimseyle paylaşmıyoruz</strong>. Google ile
+bağlanmadığınız sürece bu veri hiçbir zaman cihazınızdan dışarı çıkmaz;
+bağlandığınızda ise sadece 1.4'te açıklanan, size özel bulut yedeğine
+gider.</li>
 <li>Reklam gösterimi için <strong>Google AdMob</strong> ile, yukarıda (1.2) açıklanan
 ölçüde veri paylaşılır.</li>
-<li>Google ile giriş kullanıldığında, hesap bilgileriniz (1.4) Google/Firebase
-ile paylaşılır.</li>
+<li>Google ile bağlandığınızda, hesap bilgileriniz ve isteğe bağlı bulut
+yedeğiniz (1.4) Firebase (Google) altyapısında saklanır.</li>
 <li>Verileriniz reklam ve giriş altyapısı dışında hiçbir üçüncü tarafa
 satılmaz veya kiralanmaz.</li>
 </ul>
@@ -144,6 +154,9 @@ oyunu olsa da gerçek finansal işlem içermez.</p>
 <ul>
 <li>Uygulama içindeki <strong>Ayarlar → Oyunu Sıfırla</strong> seçeneği ile cihazınızdaki
 tüm oyun verisini istediğiniz an silebilirsiniz.</li>
+<li>Google ile bağlandıysanız, <strong>Ayarlar → Bulut Yedekleme → Bulut Kaydımı
+Sil</strong> ile buluttaki yedeğinizi kalıcı olarak silebilir, <strong>Bağlantıyı
+Kes</strong> ile hesabınızdan çıkış yapabilirsiniz.</li>
 <li>Reklam kişiselleştirmesini cihazınızın sistem ayarlarından (Android:
 Ayarlar → Google → Reklamlar) yönetebilirsiniz.</li>
 </ul>
